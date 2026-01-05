@@ -16,7 +16,7 @@
     --h2: 28px;
     --h3: 22px;
     --h4: 18px;
-    --h5: 16px;
+    --h5: 14px;
 
     --p: 16px;
     --label: 14px;
@@ -33,6 +33,7 @@
   body {
     background: var(--bg);
     color: var(--text);
+    font-family: "Public Sans", sans-serif
   }
 
   /* Headings */
@@ -40,7 +41,7 @@
   h2 { font-size: var(--h2); line-height: 1.12; font-weight: 800; letter-spacing: -0.02em; }
   h3 { font-size: var(--h3); line-height: 1.22; font-weight: 700; }
   h4 { font-size: var(--h4); line-height: 1.3;  font-weight: 700; }
-  h5 { font-size: var(--h5); line-height: 1.4;  font-weight: 700; }
+  h5 { font-size: var(--h5); line-height: 1.4; letter-spacing: 0.5em; font-weight: 500; font-family:"Fira Mono", monospace; text-transform:uppercase; }
 
   p { font-size: var(--p); line-height: 1.65; }
   label { font-size: var(--label); }
@@ -52,7 +53,7 @@
       --h2: 48px;
       --h3: 36px;
       --h4: 22px;
-      --h5: 18px;
+      --h5: 16px;
     }
   }
 }
@@ -488,6 +489,9 @@
   /* Glide: spacing entre slides (Gap) */
   #how-glide .glide__slide {
     padding-right: 20px;
+  }
+  #how-glide h5{
+    letter-spacing: normal;
   }
 
   #community{
