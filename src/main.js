@@ -2,16 +2,24 @@ import "./style.css";
 import Glide from "@glidejs/glide";
 import "@glidejs/glide/dist/css/glide.core.min.css";
 
-const howGlideEl = document.querySelector("#how-glide");
+/* ---------------------------
+   Helpers
+---------------------------- */
+function $(sel, root = document) {
+  return root.querySelector(sel);
+}
+function $all(sel, root = document) {
+  return Array.from(root.querySelectorAll(sel));
+}
 
-/**
- * HOW IT WORKS slider
- */
-const howEl = document.querySelector("#how-glide");
-let howGlide = null;
+/* ---------------------------
+   Sliders
+---------------------------- */
+function initHowSlider() {
+  const el = $("#how-glide");
+  if (!el) return;
 
-if (howEl) {
-  howGlide = new Glide("#how-glide", {
+  const glide = new Glide("#how-glide", {
     type: "carousel",
     startAt: 0,
     gap: 0,
@@ -29,24 +37,17 @@ if (howEl) {
     },
   });
 
-  howGlide.mount();
+  glide.mount();
 
-  // Controls only for this slider
-  const prevBtn = document.getElementById("howPrev");
-  const nextBtn = document.getElementById("howNext");
-
-  prevBtn?.addEventListener("click", () => howGlide?.go("<"));
-  nextBtn?.addEventListener("click", () => howGlide?.go(">"));
+  $("#howPrev")?.addEventListener("click", () => glide.go("<"));
+  $("#howNext")?.addEventListener("click", () => glide.go(">"));
 }
 
-/**
- * BREAKTHROUGH slider
- */
-const breakEl = document.querySelector("#break-glide");
-let breakGlide = null;
+function initBreakSlider() {
+  const el = $("#break-glide");
+  if (!el) return;
 
-if (breakEl) {
-  breakGlide = new Glide("#break-glide", {
+  const glide = new Glide("#break-glide", {
     type: "carousel",
     focusAt: "center",
     perView: 3,
@@ -59,102 +60,133 @@ if (breakEl) {
     },
   });
 
-  breakGlide.mount();
+  glide.mount();
 }
 
-/**
- * MOBILE DRAWER (menu)
- * Fix: define toggleBtn/drawer + openDrawer, and keep class "is-open" on .drawer
- */
-const toggleBtn = document.getElementById("navToggle");
-const drawer = document.getElementById("mobileDrawer");
+/* ---------------------------
+   Mobile drawer
+---------------------------- */
+function initDrawer() {
+  const toggleBtn = $("#navToggle");
+  const drawer = $("#mobileDrawer");
+  if (!toggleBtn || !drawer) return;
 
-function openDrawer() {
-  if (!drawer || !toggleBtn) return;
-
-  drawer.hidden = false; // must be visible before animating
-
-  // next frame so transition runs
-  requestAnimationFrame(() => drawer.classList.add("is-open"));
-
-  toggleBtn.setAttribute("aria-expanded", "true");
-  document.body.style.overflow = "hidden";
-}
-
-function closeDrawer() {
-  if (!drawer || !toggleBtn) return;
-
-  drawer.classList.remove("is-open");
-  toggleBtn.setAttribute("aria-expanded", "false");
-  document.body.style.overflow = "";
-
-  // wait for transition then hide
-  window.setTimeout(() => {
-    drawer.hidden = true;
-  }, 260);
-}
-
-toggleBtn?.addEventListener("click", () => {
-  const isOpen = toggleBtn.getAttribute("aria-expanded") === "true";
-  isOpen ? closeDrawer() : openDrawer();
-});
-
-drawer?.addEventListener("click", (e) => {
-  const target = e.target;
-
-  // close buttons / overlay
-  if (
-    target instanceof HTMLElement &&
-    target.hasAttribute("data-drawer-close")
-  ) {
-    closeDrawer();
-    return;
+  function openDrawer() {
+    drawer.hidden = false;
+    requestAnimationFrame(() => drawer.classList.add("is-open"));
+    toggleBtn.setAttribute("aria-expanded", "true");
+    document.body.style.overflow = "hidden";
   }
 
-  // close when clicking a nav link
-  if (target instanceof HTMLAnchorElement) {
-    closeDrawer();
+  function closeDrawer() {
+    drawer.classList.remove("is-open");
+    toggleBtn.setAttribute("aria-expanded", "false");
+    document.body.style.overflow = "";
+    window.setTimeout(() => {
+      drawer.hidden = true;
+    }, 260);
   }
-});
 
-window.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") closeDrawer();
-});
+  toggleBtn.addEventListener("click", () => {
+    const isOpen = toggleBtn.getAttribute("aria-expanded") === "true";
+    isOpen ? closeDrawer() : openDrawer();
+  });
 
-// Scrollspy: highlight current section in nav links
-const navLinks = document.querySelectorAll('a[href^="#"]');
-const sections = [];
+  drawer.addEventListener("click", (e) => {
+    const target = e.target;
 
-navLinks.forEach((link) => {
-  const id = link.getAttribute("href").slice(1);
-  const section = document.getElementById(id);
-  if (section) sections.push(section);
-});
+    if (
+      target instanceof HTMLElement &&
+      target.hasAttribute("data-drawer-close")
+    ) {
+      closeDrawer();
+      return;
+    }
 
-function setActive(id) {
-  navLinks.forEach((link) => {
-    const active = link.getAttribute("href") === `#${id}`;
-    link.classList.toggle("is-active", active);
-    active
-      ? link.setAttribute("aria-current", "page")
-      : link.removeAttribute("aria-current");
+    if (target instanceof HTMLAnchorElement) {
+      closeDrawer();
+    }
+  });
+
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeDrawer();
   });
 }
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    const visible = entries
-      .filter((e) => e.isIntersecting)
-      .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+/* ---------------------------
+   Scrollspy
+---------------------------- */
+function initScrollSpy() {
+  const navLinks = $all('a[href^="#"]');
+  if (!navLinks.length) return;
 
-    if (visible?.target?.id) {
-      setActive(visible.target.id);
-    }
-  },
-  {
-    rootMargin: "-40% 0px -40% 0px",
-    threshold: 0.15,
+  const sections = navLinks
+    .map((link) => link.getAttribute("href")?.slice(1))
+    .filter(Boolean)
+    .map((id) => document.getElementById(id))
+    .filter(Boolean);
+
+  if (!sections.length) return;
+
+  function setActive(id) {
+    navLinks.forEach((link) => {
+      const active = link.getAttribute("href") === `#${id}`;
+      link.classList.toggle("is-active", active);
+      active
+        ? link.setAttribute("aria-current", "page")
+        : link.removeAttribute("aria-current");
+    });
   }
-);
 
-sections.forEach((section) => observer.observe(section));
+  const observer = new IntersectionObserver(
+    (entries) => {
+      const visible = entries
+        .filter((e) => e.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+      if (visible?.target?.id) setActive(visible.target.id);
+    },
+    {
+      rootMargin: "-40% 0px -40% 0px",
+      threshold: 0.15,
+    }
+  );
+
+  sections.forEach((section) => observer.observe(section));
+}
+
+/* ---------------------------
+   Scroll reveal animations
+---------------------------- */
+function initReveals() {
+  // Only enable "start hidden" styles when JS is active
+  document.documentElement.classList.add("js");
+
+  const revealItems = $all(".reveal, .reveal-stagger");
+  if (!revealItems.length) return;
+
+  const observer = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          obs.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.15, rootMargin: "0px 0px -80px 0px" }
+  );
+
+  revealItems.forEach((el) => observer.observe(el));
+}
+
+/* ---------------------------
+   Boot
+---------------------------- */
+window.addEventListener("DOMContentLoaded", () => {
+  initHowSlider();
+  initBreakSlider();
+  initDrawer();
+  initScrollSpy();
+  initReveals();
+});
