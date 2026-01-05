@@ -192,9 +192,9 @@
     position: sticky;
     top: 0;
     z-index: 60;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    background: linear-gradient(0deg, #212020, transparent);
+    /* backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); */
+    background: linear-gradient(0deg, rgba(33, 32, 32, 0) 0%, rgba(33, 32, 32, 0.95) 50%);
   }
 
   .header-inner {
