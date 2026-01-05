@@ -361,6 +361,7 @@
   .bg-outline-fishes{
     background-image: url('/src/assets/outline-fishes2.png');
     background-position:  bottom center;
+    background-repeat: no-repeat;
   }
 
   .hero-grid {
