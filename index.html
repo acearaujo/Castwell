@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Castwell Landing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script type="module" crossorigin src="/Castwell/assets/index-DDHFG9tH.js"></script>
+    <link rel="stylesheet" crossorigin href="/Castwell/assets/index-CHFpkpUX.css">
+  </head>
+  <body>
+
+  <main class="min-h-screen bg-app text-app">
+    <div class="orbs" aria-hidden="true">
+      <span class="orb orb-red orb-1"></span>
+      <span class="orb orb-blue orb-2"></span>
+    </div>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="#top" class="logo" aria-label="Castwell home">
+          <img src="/Castwell/assets/logo-castwell-BrQACuZP.svg" alt="Castwell" class="logo-img" />
+        </a>
+
+        <nav class="nav-desktop" aria-label="Primary">
+          <a class="" href="#hero">The Call</a>
+          <a class="" href="#breakthrough">The Breakthrough</a>
+          <a class="" href="#community">Community</a>
+          <a class="" href="#how">How It Works</a>
+          <a class="btn btn-secundary" href="#download">Download</a>
+        </nav>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Open menu"
+          aria-controls="mobileDrawer"
+          aria-expanded="false"
+          id="navToggle"
+        >
+          <span class="sr-only">Open menu</span>
+          <span class="hamburger" aria-hidden="true"></span>
+        </button>
+      </div>
+
+    <!-- Off-canvas + overlay (ONE NAV for mobile) -->
+    <div class="drawer" id="mobileDrawer" hidden>
+      <div class="drawer-overlay" data-drawer-close></div>
+
+      <aside class="drawer-panel" role="dialog" aria-modal="true" aria-label="Site menu">
+        <div class="drawer-head">
+          <span class="drawer-title">Menu</span>
+          <button class="drawer-close" type="button" aria-label="Close menu" data-drawer-close>
+            ✕
+          </button>
+        </div>
+
+        <nav class="drawer-nav" aria-label="Mobile Primary">
+          <a class="nav-link" href="#call">The Call</a>
+          <a class="nav-link" href="#challenge">The Challenge</a>
+          <a class="nav-link" href="#breakthrough">The Breakthrough</a>
+          <a class="nav-link" href="#community">Community</a>
+          <a class="nav-link" href="#how">How It Works</a>
+          <a class="nav-link" href="#download">Download</a>
+        </nav>
+
+        <div class="drawer-cta">
+          <a class="btn btn-primary w-full" href="#download">Download</a>
+          <a class="btn btn-secondary w-full" href="#how">How it works</a>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <section id="hero" class="hero bg-outline-fishes">
+    <div class="container hero-grid">
+      <!-- Left: copy -->
+      <div class="hero-copy py-10 lg:py-0">
+        <h5 class="text-primary mb-4">For those who feel the call</h5>
+
+        <h1 class="mb-4">
+          YOU’RE NOT MEANT<br />
+          TO DO THIS ALONE
+        </h1>
+
+        <p class="mb-10">
+          Castwell helps you find your people — and cast together with purpose.
+        </p>
+
+        <div class="ctas items-center">
+          <a class="btn btn-primary" href="#">Download for iOS 
+            <svg width="13" height="16" viewBox="0 0 11 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.89708 11.6667C9.34375 12.4933 8.75708 13.3 7.86375 13.3133C6.97041 13.3333 6.68375 12.7867 5.67041 12.7867C4.65041 12.7867 4.33708 13.3 3.49039 13.3333C2.61706 13.3667 1.95706 12.4533 1.39706 11.6467C0.25706 10 -0.616273 6.96667 0.55706 4.92667C1.13706 3.91333 2.17706 3.27333 3.30373 3.25333C4.15708 3.24 4.97041 3.83333 5.49708 3.83333C6.01708 3.83333 7.00375 3.12 8.03708 3.22667C8.47041 3.24667 9.68375 3.4 10.4637 4.54667C10.4037 4.58667 9.01708 5.4 9.03041 7.08667C9.05041 9.1 10.7971 9.77333 10.8171 9.78C10.7971 9.82667 10.5371 10.74 9.89708 11.6667ZM6.09041 1C6.57708 0.446667 7.38375 0.0266667 8.05041 0C8.13708 0.78 7.82375 1.56667 7.35708 2.12667C6.89708 2.69333 6.13708 3.13333 5.39041 3.07333C5.29041 2.30667 5.66375 1.50667 6.09041 1Z" fill="black"/>
+            </svg>
+          </a>
+          <a class="btn btn-secondary" href="#">Get it on Android
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.99993 8.94274L9.96447 10.9072L3.5 14.6395C3.14913 14.8421 2.75208 14.8048 2.45466 14.6117L2.38246 14.5602L7.99993 8.94274ZM2 2.94278L7.05713 7.99994L2 13.0571V2.94278ZM11.1599 5.78284L13.5 7.13394C14.1667 7.51881 14.1667 8.48108 13.5 8.86594L11.1599 10.217L8.9428 7.99994L11.1599 5.78284ZM3.5 1.36041L9.9644 5.09265L7.99993 7.05714L2.38247 1.43964C2.68559 1.20304 3.11989 1.14095 3.5 1.36041Z" fill="#FAE013"/>
+            </svg>
+          </a>
+          <h5 class="px-4">Coming Soon!</h5>
+        </div>
+      </div>
+
+      <!-- Right: phone mock -->
+      <div class="hero-media">
+        <div class="hero-media-layer">
+          <img
+            src="/Castwell/assets/hero-castwell-BQrKpie7.png"
+            alt="Castwell app screen"
+            class="hero-phone"
+            loading="eager"
+          />
+
+          <img src="data:image/svg+xml,%3csvg%20width='104'%20height='79'%20viewBox='0%200%20104%2079'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M25.2867%2014.8112C43.6208%207.12769%2053.5172%208.45544%2070.6315%2018.788C77.1732%2024.9225%2079.7452%2029.1126%2082.0942%2038.1061C82.8927%2040.3466%2083.8325%2040.6353%2086.469%2039.2719C98.3271%2030.9664%20103.376%2028.7216%20102.99%2038.8772L102.066%2060.6756C98.4111%2068.9753%2095.8907%2069.4515%2090.9708%2066.478L83.9098%2059.8784C81.5916%2058.2504%2080.9455%2058.4904%2080.6556%2060.4013C72.9216%2072.4295%2066.5832%2075.4729%2053.7174%2078.027L45.7891%2061.5268L57.3725%2066.1275C63.9004%2064.5037%2069.2162%2056.8531%2065.0938%2050.8969C62.1486%2047.8816%2060.2257%2047.1895%2056.395%2047.4968L45.1299%2049.9052C40.5438%2050.9997%2040.4947%2053.5283%2046.4448%2054.0501C51.9805%2052.5266%2054.7939%2052.071%2058.5209%2053.0334C62.3349%2054.5802%2060.8548%2060.9553%2055.9018%2061.1814L47.5366%2058.2072C43.0314%2056.1109%2041.042%2059.1026%2045.7891%2061.5268L53.7174%2078.027C33.6805%2079.1916%2023.7976%2076.1355%208.71411%2063.7014L1.08047%2053.4224C-1.221%2046.8988%200.119865%2046.2303%205.4333%2048.3775C11.73%2052.9423%2015.5116%2049.9728%2011.0702%2044.8146C7.94888%2041.5754%205.74859%2040.9791%201.49308%2040.8129C3.60241%2034.4718%206.72177%2030.4875%2014.7891%2022.8475L27.1273%2026.5061C21.9101%2026.9974%2020.0445%2028.4555%2017.9771%2032.483C18.0265%2037.9596%2019.4332%2040.1757%2025.7916%2041.7366C30.9038%2041.6956%2032.9711%2040.3172%2034.8071%2034.7411C33.7211%2029.9454%2032.2079%2028.0012%2027.1273%2026.5061L14.7891%2022.8475L25.2867%2014.8112Z'%20fill='%2331B7FF'/%3e%3cpath%20d='M29.9613%2035.2201C29.8503%2036.4853%2028.3685%2037.3888%2026.6515%2037.2382C24.9345%2037.0876%2022.9781%2035.8824%2023.089%2034.6172C23.2%2033.3521%2026.0166%2031.3295%2027.7335%2031.4801C29.4505%2031.6307%2030.0722%2033.955%2029.9613%2035.2201Z'%20fill='%2331B7FF'/%3e%3cpath%20d='M40.3474%205.27654C47.2621%200.0530281%2051.5872%20-0.579951%2059.7111%200.367575C68.804%201.85937%2073.3032%203.47774%2078.8175%209.63664C79.5271%2011.546%2079.2886%2012.5641%2078.4056%2014.3338C76.6321%2017.1605%2075.6631%2017.5299%2074.0003%2016.2155C63.4498%208.66421%2056.2498%206.81538%2041.3501%207.33668C38.0914%208.12463%2037.8256%207.69928%2040.3474%205.27654Z'%20fill='%2331B7FF'/%3e%3c/svg%3e" alt="" aria-hidden="true" class="hero-fish fish-1" />
+          <img src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='UTF-8'?%3e%3csvg%20id='Capa_1'%20xmlns='http://www.w3.org/2000/svg'%20version='1.1'%20viewBox='0%200%2062%2049'%3e%3c!--%20Generator:%20Adobe%20Illustrator%2029.4.0,%20SVG%20Export%20Plug-In%20.%20SVG%20Version:%202.1.0%20Build%20152)%20--%3e%3cdefs%3e%3cstyle%3e%20.st0%20{%20fill:%20%23ed6758;%20}%20%3c/style%3e%3c/defs%3e%3cpath%20class='st0'%20d='M7,17.6l7.3,1.1c3,.5,4,1.4,5,4.1-.6,3.3-1.7,4.3-4.6,4.7-3.7-.4-4.7-1.5-5.2-4.7.9-2.5,1.8-3.4,4.7-4.1l-7.3-1.1c-4,5-5.5,7.5-6.2,11.3,2.4-.2,3.7,0,5.8,1.5,2.9,2.6,1,4.6-2.9,2.5-3.2-.8-3.9-.3-2.1,3.2l5.1,5.3c9.6,5.9,15.4,6.9,26.7,4.6l-5.8-8.8c-2.9-1-2-2.9.7-2l5,1c2.8-.5,3.1-4.3.9-4.8-2.2-.3-3.8.2-6.8,1.5-3.4.2-3.6-1.3-1.1-2.3l6.2-2.2c2.2-.5,3.3-.2,5.2,1.3,2.8,3.1.4,7.8-3.2,9.3l-6.9-1.7,5.8,8.8c7.1-2.5,10.5-4.7,14-12.1,0-1.1.4-1.3,1.8-.6l4.5,3.2c3,1.3,4.4.8,5.9-4.2l-1.2-12.5c-.6-5.8-3.3-4.1-9.4,1.5-1.4,1-2,.9-2.6-.3-2-4.9-3.8-7.1-8-10.1-10.5-4.5-16.3-4.5-26.1,1.3l-5.3,5.4Z'/%3e%3cpath%20class='st0'%20d='M15.1,21.5c-1,0-2.4,1.4-2.4,2.1,0,.7,1.2,1.3,2.2,1.2,1,0,1.8-.7,1.7-1.4,0-.7-.6-2-1.6-2Z'/%3e%3cpath%20class='st0'%20d='M20.9,6.7c8.4-1.5,12.7-1,19.3,2.5,1,.6,1.6.3,2.4-1.4.4-1.1.4-1.7-.1-2.7-3.6-3.1-6.3-3.6-11.6-3.8-4.7,0-7.1.8-10.6,4.3-1.2,1.6-1.1,1.8.7,1.1Z'/%3e%3c/svg%3e" alt="" aria-hidden="true" class="hero-fish fish-2" />
+          <img src="data:image/svg+xml,%3csvg%20width='74'%20height='65'%20viewBox='0%200%2074%2065'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M24.1887%2014.0793C35.9366%2012.1011%2041.5298%2014.2281%2050.1043%2022.5956C53.0832%2027.069%2054.0115%2029.8654%2054.1533%2035.4342C54.3131%2036.8506%2054.822%2037.1475%2056.5467%2036.7122C64.6009%2033.4861%2067.8537%2032.8661%2066.2409%2038.7393L62.7234%2051.3326C59.4564%2055.6761%2057.9207%2055.6096%2055.4562%2053.2023L52.2378%2048.3865C51.1075%2047.1198%2050.6977%2047.1716%2050.2675%2048.247C44.1111%2054.2088%2039.9968%2055.1186%2032.1405%2054.851L29.7688%2044.1396L35.8992%2048.4069C39.9302%2048.3514%2044.0773%2044.6135%2042.4857%2040.5748C41.1792%2038.4129%2040.1517%2037.7463%2037.8745%2037.4022L30.9721%2037.2683C28.1465%2037.2803%2027.7724%2038.749%2031.173%2039.8666C34.6113%2039.734%2036.3152%2039.8525%2038.3584%2040.9233C40.3726%2042.3471%2038.6379%2045.8647%2035.7169%2045.3199L31.2421%2042.4414C28.8997%2040.6026%2027.3301%2042.0765%2029.7688%2044.1396L32.1405%2054.851C20.2897%2052.7927%2014.9405%2049.6591%207.83814%2040.3427L4.78835%2033.3018C4.3368%2029.1807%205.21054%2028.9739%208.01758%2030.9528C11.0681%2034.4768%2013.6804%2033.2608%2011.7936%2029.644C10.4149%2027.3274%209.21247%2026.6789%206.75205%2026.0004C8.8493%2022.5885%2011.2139%2020.6899%2016.9652%2017.3342L23.6647%2021.1549C20.5533%2020.7287%2019.2654%2021.3246%2017.5088%2023.3922C16.7893%2026.5946%2017.3073%2028.0799%2020.8042%2029.8595C23.7929%2030.5341%2025.1874%2030.0122%2027.0207%2027.0094C27.0423%2024.0627%2026.4249%2022.7215%2023.6647%2021.1549L16.9652%2017.3342L24.1887%2014.0793Z'%20fill='white'/%3e%3cpath%20d='M24.1276%2026.6268C23.89%2027.3499%2022.9019%2027.6746%2021.9206%2027.3521C20.9393%2027.0297%2019.9624%2026.059%2020.2%2025.336C20.4376%2024.6129%2022.3575%2023.8176%2023.3388%2024.1401C24.3201%2024.4625%2024.3652%2025.9037%2024.1276%2026.6268Z'%20fill='white'/%3e%3cpath%20d='M34.2796%2010.5737C39.0281%208.47053%2041.6383%208.69216%2046.2492%2010.3551C51.3511%2012.468%2053.7553%2014.0271%2056.1314%2018.3743C56.2846%2019.5854%2056.0063%2020.1469%2055.2492%2021.0589C53.8282%2022.4659%2053.2123%2022.5491%2052.4216%2021.5549C47.2971%2015.7071%2043.3485%2013.6445%2034.5832%2011.9128C32.5741%2011.9273%2032.4771%2011.6428%2034.2796%2010.5737Z'%20fill='white'/%3e%3c/svg%3e" alt="" aria-hidden="true" class="hero-fish fish-3" />
+          <img src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='UTF-8'?%3e%3csvg%20id='Capa_1'%20xmlns='http://www.w3.org/2000/svg'%20version='1.1'%20viewBox='0%200%2038%2031'%3e%3c!--%20Generator:%20Adobe%20Illustrator%2029.4.0,%20SVG%20Export%20Plug-In%20.%20SVG%20Version:%202.1.0%20Build%20152)%20--%3e%3cdefs%3e%3cstyle%3e%20.st0%20{%20fill:%20%2311ce86;%20}%20%3c/style%3e%3c/defs%3e%3cpath%20class='st0'%20d='M6.3,9.5l4.3,1.2c1.8.5,2.3,1.2,2.7,2.8-.6,2-1.3,2.4-3.1,2.5-2.2-.5-2.7-1.3-2.8-3.2.7-1.4,1.3-1.9,3.2-2.1l-4.3-1.2c-2.8,2.7-3.9,4.1-4.6,6.3,1.5,0,2.3.2,3.4,1.4,1.6,1.8.3,2.8-2,1.3-1.9-.7-2.3-.5-1.5,1.8l2.7,3.6c5.3,4.3,8.8,5.3,15.8,4.8l-2.8-5.7c-1.7-.8-1-1.9.6-1.2l2.9,1c1.7-.1,2.2-2.3.9-2.9-1.3-.3-2.3-.1-4.2.4-2.1-.2-2.1-1-.5-1.4l3.9-.9c1.3-.1,2,.1,3.1,1.1,1.5,2.1-.4,4.8-2.6,5.4l-4.1-1.6,2.8,5.7c4.5-1,6.7-2,9.3-6.3,0-.7.3-.8,1.1-.2l2.5,2.3c1.7,1,2.6.8,3.8-2.1l.2-7.6c0-3.5-1.7-2.7-5.8.2-.9.5-1.2.4-1.5-.4-.9-3.1-1.8-4.6-4.1-6.7-6-3.5-9.5-3.9-15.9-1.2l-3.6,2.9Z'/%3e%3cpath%20class='st0'%20d='M10.8,12.5c-.6,0-1.6.7-1.6,1.1,0,.4.7.9,1.3.9.6,0,1.1-.3,1.1-.7,0-.4-.2-1.3-.8-1.3Z'/%3e%3cpath%20class='st0'%20d='M15.5,4c5.2-.3,7.7.4,11.4,2.9.6.5.9.3,1.5-.7.3-.6.4-1,.1-1.6-2-2.1-3.5-2.7-6.7-3.1-2.8-.3-4.3,0-6.7,1.8-.9.9-.8,1,.4.7Z'/%3e%3c/svg%3e" alt="" aria-hidden="true" class="hero-fish fish-4" />
+        </div>
+      </div>
+  </section>
+
+  <section id="challenge" class="text-center">
+    <h5 class="text-primary mb-4">The Challenge</h5>
+    <div class="mb-10">
+      <h2>THE CALL IS REAL.</h2>
+      <h2>DOING IT ALONE IS HARD.</h2>
+    </div>
+    <div class="wave">
+      <div class="" style="max-height: 700px; margin: 0px auto; text-align: center;" >
+          <div class="wave-wrapper">
+            <svg
+              viewBox="0 0 800 30"
+              width="800"
+              height="30"
+              preserveAspectRatio="none"
+              class="wave-svg"
+            >
+              <path
+                d="
+                  M0 15
+                  Q 50 2, 100 15
+                  T 200 15
+                  T 300 15
+                  T 400 15
+                  T 500 15
+                  T 600 15
+                  T 700 15
+                  T 800 15
+                "
+                fill="none"
+                stroke="#6EC1FF"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
+          <div class="wave-wrapper">
+            <svg
+              viewBox="0 0 800 30"
+              width="800"
+              height="30"
+              preserveAspectRatio="none"
+              class="wave-svg wave-2"
+            >
+              <path
+                d="
+                  M0 15
+                  Q 50 2, 100 15
+                  T 200 15
+                  T 300 15
+                  T 400 15
+                  T 500 15
+                  T 600 15
+                  T 700 15
+                  T 800 15
+                "
+                fill="none"
+                stroke="#6EC1FF"
+                stroke-width="1"
+              />
+            </svg>
+          </div>
+      </div>
+    </div>
+    
+  </section>
+
+  <section id="breakthrough">
+    <div class="container">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+
+        <!-- Imagen: primero en mobile, segundo en desktop -->
+        <div class="order-2 lg:order-2 flex justify-center lg:justify-center">
+          <img
+            src="/Castwell/assets/breakthrought-adjr1ilz.png"
+            alt="Castwell app screen"
+            class=""
+            loading="eager"
+          />
+        </div>
+
+        <!-- Texto: segundo en mobile, primero en desktop -->
+        <div class="order-1 lg:order-1">
+          <h5 class="text-primary mb-4">The Breakthrough</h5>
+
+          <div class="mb-10">
+            <h2>FIND THE PEOPLE</h2>
+            <h2>YOU'RE CALLED TO REACH</h2>
+          </div>
+
+          <p>
+            Castwell helps you discover real communities and connects you with others already reaching them.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+   <section id="community" class="text-center">
+    <h5 class="text-primary mb-4">The Community</h5>
+    <div class="mb-10">
+    <h2 class="mb-4">FIND WHERE YOU BELONG</h2>
+     <p>Communities already in motion.</p>
+    </div>
+
+    <div class="container">
+      <div class="glide break-glide" id="break-glide">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            <li class="glide__slide">
+              <article class="break-card">
+                <img src="/Castwell/assets/community-ss01-CnEL4_Sv.png" alt="Castwell community pond showing active members, recent posts, and shared mission focus" />
+              </article>
+            </li>
+
+            <li class="glide__slide">
+              <article class="break-card">
+                <img src="/Castwell/assets/community-ss02-Bgs-OHMH.png" alt="Member list inside a Castwell community pond showing people collaborating around shared outreach goals" />
+              </article>
+            </li>
+
+            <li class="glide__slide">
+              <article class="break-card">
+                <img src="/Castwell/assets/community-ss03-DzDh9QqE.png" alt="Community feed in Castwell where members share encouragement, insights, and questions in real conversations" />
+              </article>
+            </li>
+
+            <li class="glide__slide">
+              <article class="break-card">
+                <img src="/Castwell/assets/community-ss04-DaSS7Wxk.png" alt="Outreach event created inside a Castwell community, turning shared conversations into coordinated action" />
+              </article>
+            </li>
+
+            <li class="glide__slide">
+              <article class="break-card">
+                <img src="/Castwell/assets/community-ss05-Cxux879t.png" alt="Shared resources inside a Castwell community including links, videos, and tools for coordinated outreach" />
+              </article>
+            </li>
+          </ul>
+        </div>
+
+        <div class="glide__arrows" data-glide-el="controls">
+          <button class="glide__arrow glide__arrow--left glide-btn" data-glide-dir="<" aria-label="Previous"> <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5.75 11.875L0.250001 6.625C0.0937507 6.46875 6.8299e-07 6.28125 7.02114e-07 6.0625C7.18506e-07 5.875 0.0937507 5.6875 0.250001 5.53125L5.75 0.281249C6.03125 -6.9665e-07 6.53125 -6.52939e-07 6.8125 0.312499C7.09375 0.593749 7.09375 1.09375 6.78125 1.375L2.625 5.3125L13.25 5.3125C13.6875 5.3125 14 5.65625 14 6.0625C14 6.5 13.6875 6.8125 13.25 6.8125L2.625 6.8125L6.78125 10.7812C7.09375 11.0625 7.09375 11.5625 6.8125 11.8437C6.53125 12.1562 6.0625 12.1562 5.75 11.875Z" fill="#FAE013"/>
+      </svg></button>
+          <button class="glide__arrow glide__arrow--right glide-btn" data-glide-dir=">" aria-label="Next"> <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8.25 0.281251L13.75 5.53125C13.9062 5.6875 14 5.875 14 6.09375C14 6.28125 13.9062 6.46875 13.75 6.625L8.25 11.875C7.96875 12.1563 7.46875 12.1563 7.1875 11.8438C6.90625 11.5625 6.90625 11.0625 7.21875 10.7813L11.375 6.84375L0.749998 6.84375C0.312498 6.84375 -1.47526e-06 6.5 -1.40423e-06 6.09375C-1.32773e-06 5.65625 0.312499 5.34375 0.749999 5.34375L11.375 5.34375L7.21875 1.375C6.90625 1.09375 6.90625 0.593751 7.1875 0.312501C7.46875 1.30588e-06 7.9375 1.38784e-06 8.25 0.281251Z" fill="#FAE013"/>
+        </svg></button>
+        </div>
+      </div>
+    </div>
+    
+  </section>
+
+  <section id="how" class="section">
+  <div class="container">
+    <!-- Header row -->
+    <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+      <div>
+        <h5 class="text-primary mb-3 font-semibold">How it works</h5>
+        <h2 class="max-w-2xl">
+          EVERYTHING YOU NEED<br class="hidden sm:block" />
+          TO CAST WITH PURPOSE.
+        </h2>
+      </div>
+
+      <!-- Controls -->
+     <div class="flex gap-3 md:mt-6 md:justify-end">
+      <button id="howPrev" class="glide-btn" type="button" aria-label="Previous">
+        <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5.75 11.875L0.250001 6.625C0.0937507 6.46875 6.8299e-07 6.28125 7.02114e-07 6.0625C7.18506e-07 5.875 0.0937507 5.6875 0.250001 5.53125L5.75 0.281249C6.03125 -6.9665e-07 6.53125 -6.52939e-07 6.8125 0.312499C7.09375 0.593749 7.09375 1.09375 6.78125 1.375L2.625 5.3125L13.25 5.3125C13.6875 5.3125 14 5.65625 14 6.0625C14 6.5 13.6875 6.8125 13.25 6.8125L2.625 6.8125L6.78125 10.7812C7.09375 11.0625 7.09375 11.5625 6.8125 11.8437C6.53125 12.1562 6.0625 12.1562 5.75 11.875Z" fill="#FAE013"/>
+      </svg>
+      </button>
+      <button id="howNext" class="glide-btn" type="button" aria-label="Next">
+        <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8.25 0.281251L13.75 5.53125C13.9062 5.6875 14 5.875 14 6.09375C14 6.28125 13.9062 6.46875 13.75 6.625L8.25 11.875C7.96875 12.1563 7.46875 12.1563 7.1875 11.8438C6.90625 11.5625 6.90625 11.0625 7.21875 10.7813L11.375 6.84375L0.749998 6.84375C0.312498 6.84375 -1.47526e-06 6.5 -1.40423e-06 6.09375C-1.32773e-06 5.65625 0.312499 5.34375 0.749999 5.34375L11.375 5.34375L7.21875 1.375C6.90625 1.09375 6.90625 0.593751 7.1875 0.312501C7.46875 1.30588e-06 7.9375 1.38784e-06 8.25 0.281251Z" fill="#FAE013"/>
+        </svg>
+      </button>
+    </div>
+    </div>
+
+    <!-- Slider -->
+
+    <div class="glide mt-10" id="how-glide">
+      <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides">
+          <li class="glide__slide">
+            <article class="how-card">
+              <img class="how-card__img" src="/Castwell/assets/ss01-castwell-CQ95T4je.png" alt="Find your fish" />
+              <h5 class="how-card__title text-primary">Find your fish</h5>
+              <p class="how-card__text">
+                Discover the people God has placed on your heart — matched by purpose, interests, and calling.
+              </p>
+            </article>
+          </li>
+
+          <li class="glide__slide">
+            <article class="how-card">
+              <img class="how-card__img" src="/Castwell/assets/ss02-castwell-DYvOOMbU.png" alt="Matched to your calling" />
+              <h5 class="how-card__title text-primary">Matched to your calling</h5>
+              <p class="how-card__text">
+                Castwell connects you with real communities already reaching the people you’re called to serve.
+              </p>
+            </article>
+          </li>
+
+          <li class="glide__slide">
+            <article class="how-card">
+              <img class="how-card__img" src="/Castwell/assets/ss03-castwell-CufyLYib.png" alt="Join ponds" />
+              <h5 class="how-card__title text-primary">Join ponds</h5>
+              <p class="how-card__text">
+                Find focused communities built around mission — not noise, not feeds, just action.
+              </p>
+            </article>
+          </li>
+
+          <li class="glide__slide">
+            <article class="how-card">
+              <img class="how-card__img" src="/Castwell/assets/ss04-castwell-nwrxO7oD.png" alt="Cast together" />
+              <h5 class="how-card__title text-primary">Cast together</h5>
+              <p class="how-card__text">
+                Share insights, ask questions, and encourage one another through real conversations that move faith forward.
+              </p>
+            </article>
+          </li>
+
+          <li class="glide__slide">
+            <article class="how-card">
+              <img class="how-card__img" src="/Castwell/assets/ss05-castwell-CE9zVihV.png" alt="From talk to action" />
+              <h5 class="how-card__title text-primary">From talk to action</h5>
+              <p class="how-card__text">
+                Plan outreach, host events, and coordinate efforts—all inside your pond.
+              </p>
+            </article>
+          </li>
+
+          <li class="glide__slide">
+            <article class="how-card">
+              <img class="how-card__img" src="/Castwell/assets/ss06-castwell-Ctl5GgUH.png" alt="Everything in one place" />
+              <h5 class="how-card__title text-primary">Everything in one place</h5>
+              <p class="how-card__text">
+                Share videos, links, docs, and tools so your community stays equipped and aligned.
+              </p>
+            </article>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="download" class="bg-outline-fishes">
+  <div class="container">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+
+      <!-- Imagen: primero en mobile, segundo en desktop -->
+      <div class="order-1 lg:order-2 flex justify-center lg:justify-center">
+        <img
+          src="/Castwell/assets/fishing_for_download-Bb1cYbz8.png"
+          alt="Castwell app screen"
+          class=""
+          loading="eager"
+        />
+      </div>
+
+      <div class="order-2 lg:order-1">
+
+        <h5 class="text-primary mb-4">Your next step</h5>
+
+        <div class="mb-4">
+          <h2>YOU'VE FELT THE CALL.</h2>
+          <h2>NOW CAST WITH OTHERS.</h2>
+        </div>
+
+        <p class="mb-10">
+          Castwell helps you move from intention to action — together.
+        </p>
+        <div class="ctas items-center">
+          <a class="btn btn-primary" href="#">Download for iOS 
+            <svg width="13" height="16" viewBox="0 0 11 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.89708 11.6667C9.34375 12.4933 8.75708 13.3 7.86375 13.3133C6.97041 13.3333 6.68375 12.7867 5.67041 12.7867C4.65041 12.7867 4.33708 13.3 3.49039 13.3333C2.61706 13.3667 1.95706 12.4533 1.39706 11.6467C0.25706 10 -0.616273 6.96667 0.55706 4.92667C1.13706 3.91333 2.17706 3.27333 3.30373 3.25333C4.15708 3.24 4.97041 3.83333 5.49708 3.83333C6.01708 3.83333 7.00375 3.12 8.03708 3.22667C8.47041 3.24667 9.68375 3.4 10.4637 4.54667C10.4037 4.58667 9.01708 5.4 9.03041 7.08667C9.05041 9.1 10.7971 9.77333 10.8171 9.78C10.7971 9.82667 10.5371 10.74 9.89708 11.6667ZM6.09041 1C6.57708 0.446667 7.38375 0.0266667 8.05041 0C8.13708 0.78 7.82375 1.56667 7.35708 2.12667C6.89708 2.69333 6.13708 3.13333 5.39041 3.07333C5.29041 2.30667 5.66375 1.50667 6.09041 1Z" fill="black"/>
+            </svg>
+          </a>
+          <a class="btn btn-secondary" href="#">Get it on Android
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.99993 8.94274L9.96447 10.9072L3.5 14.6395C3.14913 14.8421 2.75208 14.8048 2.45466 14.6117L2.38246 14.5602L7.99993 8.94274ZM2 2.94278L7.05713 7.99994L2 13.0571V2.94278ZM11.1599 5.78284L13.5 7.13394C14.1667 7.51881 14.1667 8.48108 13.5 8.86594L11.1599 10.217L8.9428 7.99994L11.1599 5.78284ZM3.5 1.36041L9.9644 5.09265L7.99993 7.05714L2.38247 1.43964C2.68559 1.20304 3.11989 1.14095 3.5 1.36041Z" fill="#FAE013"/>
+            </svg>
+          </a>
+          <h5 class="px-4">Coming Soon!</h5>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<footer class="py-4">
+<div class="container">
+  <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+    
+    <!-- Left -->
+    <p class="text-sm">
+      © 2025 Castwell. Built for those who feel the call.
+    </p>
+
+     <!-- Right -->
+    <nav class="flex gap-6 text-sm nav-desktop">
+      <a href="/privacy" class="">Privacy</a>
+      <a href="/terms" class="">Terms</a>
+      <a href="/eula" class="">EULA</a>
+      <a href="https://deepspacerobots.com/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 dsr-badge">
+        <svg width="20" height="20" viewBox="0 0 196 195" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 194.78V0H195.01V194.78H0Z" fill="#FFE600"/>
+          <path d="M153.85 80.33V46.23H119.64V80.33H153.85Z" fill="black"/>
+          <path d="M41.37 46.14V80.25H75.54V46.14H41.37Z" fill="black"/>
+        </svg>
+      </a>
+    </nav>
+
+  </div>
+</div>
+</footer>
+</body>
+</html>
